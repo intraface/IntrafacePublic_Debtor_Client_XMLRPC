@@ -36,25 +36,25 @@ require_once 'XML/RPC2/Client.php';
  * @version   @package-version@
  * @link      http://public.intraface.dk/index.php?package=IntrafacePublic_Debtor_XMLRPC
  */
-class IntrafacePublic_Debtor_XMLRPC_Client
+class IntrafacePublic_Debtor_Client_XMLRPC
 {
     /**
      * @var object XML_RPC2_Client object
      */
-    private $client;
+    protected $client;
 
     /**
      * @var struct options
      */
-    private $options = array(
+    protected $options = array(
         'prefix' => 'debtor.',
-        'encoding' => 'iso-8859-1'
+        'encoding' => 'utf-8'
     );
 
     /**
      * @var struct members (private_key, session_id)
      */
-    private $credentials;
+    protected $credentials;
 
     /**
      * Constructor
